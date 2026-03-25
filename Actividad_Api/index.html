@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de Libros</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Biblioteca Digital</h1>
+      <p>Encuentra tus libros favoritos</p>
+    </header>
+
+    <form class="buscador" onsubmit="return false;">
+      <input type="text" id="libros_buscar" placeholder="Buscar libros..." />
+      <select name="" id="selec">
+        <option value="0">busqueda por categoria</option>
+        <option value="1">autor</option>
+        <option value="2">categoria</option>
+        <option value="3">identificador</option>
+        <option value="4">todos</option>
+      </select>
+      <button type="submit" onclick="getlibros()">Buscar</button>
+      <button type="submit" onclick="abrir_libro()">agregar Libros</button>
+    </form>
+    <div id="libros"></div>
+
+    <div id="modalLibro" class="modal">
+
+  <div class="modal-contenido">
+    
+    <h2>Agregar Libro</h2>
+
+    <input type="text" id="titulo" placeholder="Título del libro">
+    <input type="text" id="autor" placeholder="Autor">
+    <input type="text" id="img" placeholder="LINK de la imagen">
+    <input type="text" id="categoria" placeholder="Categoría">
+
+    <button type="submit" onclick="guardar()">Guardar</button>
+    <button  onclick="cerrarModal()">Cerrar</button>
+
+  </div>
+
+</div>
+    <script src="gestion.js"></script>
+    
+    
+  </body>
+</html>
